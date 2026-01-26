@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
+        body{
+            min-height: 100vh;
+            background-color: rgb(223, 219, 213);
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template: auto 1fr auto / 200px 1fr;
+            grid-template-areas: "header header"
+                                 "sidebar main"
+                                 "footer footer";
+        }
+        .header{
+            grid-area: header;
+            background-color: rgb(148, 125, 91);
+            color: white;
+            padding: 20px;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: rgb(97, 142, 142);
+            padding: 20px;
+        }
+        .sidebar ul{
+            list-style: none;
+        }
+        .sidebar li{
+            margin-bottom: 10px;
+        }
+        .sidebar a{
+            text-decoration: none;
+            color: rgb(187, 196, 158);
+        }
+        .main-content{
+            grid-area: main;
+            background-color: rgb(217, 153, 153);
+            padding: 20px;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: rgb(182, 142, 220);
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header"> 
+        <h1>Holy Grail Layout</h1>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h2>Main Content</h2>
+            <p>
+                My name is Harati, Welcome to my Holy-Grail Layout page.
+            </p>
+    </main>
+
+    <footer class="footer">
+        <p>Footer</p>
+    </footer>
+</body>
+</html>
