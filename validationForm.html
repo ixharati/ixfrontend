@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation Page</title>
+</head>
+<body>
+
+<h2>Validation Form</h2>
+
+<form onsubmit="return validateForm()">
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="text" id="email"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<p style="color:red;" id="msg"></p>
+<p id="result"></p>
+
+<script>
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var msg = document.getElementById("msg");
+    document.getElementById("result").innerHTML = "";
+    msg.innerHTML = "";
+    
+
+    if (name === "") {
+        msg.innerHTML = "Name cannot be empty";
+        return false;
+    }
+
+    if (!email.includes("@gmail.com") || email.length < 11) {
+        msg.innerHTML = "Email must end with @gmail.com and be at least 11 characters long";
+        return false;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Submitted Data:<br>Name: " + name + "<br>Email: " + email;
+
+    return false;
+}
+</script>
+
+</body>
+</html>
