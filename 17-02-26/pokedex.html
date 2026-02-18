@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="pokedex.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-red-500 min-h-screen overflow-hidden">
+    <header class="flex justify-between h-10 mb-2 p-1">
+        <img src="./Pokédex_logo.png" alt="">
+    </header>
+    <main class="flex flow-col gap-3 justify-evenly items-center p-8">
+        <div class="">
+            <img src="./Pokédex_logo.png" alt="">
+            <p class="text-white font-serif font-bold text-2xl text-center">A Pokédex Website</p>
+        </div>
+        <div
+            class="w-full max-w-5xl mx-auto flex flex-col gap-8 justify-evenly items-center bg-white/20 rounded-3xl shadow-2xl p-8 md:p-10">
+
+            <div class="flex flex-row gap-3 max-auto">
+                <input type="text" placeholder="Search Pokemon"
+                    class="flex-1 px-4 py-2 bg-yellow-50 center shadow-md outline-none">
+
+                <button type="button" onclick="pokemon()" id="search" class="flex items-center justify-center" actio>
+                    <img src="./search.png" alt="Search" class="w-9 h-9 object-contain">
+                </button>
+            </div>
+
+            <div id="container" class="w-full overflow-y-auto bg-red-500 rounded-2xl shadow-md p-4 md:p-8">
+                   <div class="rounded-2xl w-[200px] h-[300px] flex flex-col justify-center p-3"></div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
+
