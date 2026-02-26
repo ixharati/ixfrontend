@@ -3,39 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="pokedex.js" defer></script>
+    <title>Pokedex</title>
+    <script src="pokedex.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-red-500 min-h-screen overflow-hidden">
-    <header class="flex justify-between h-10 mb-2 p-1">
-        <img src="./Pokédex_logo.png" alt="">
+<body class="bg-[rgb(255,0,0)] min-h-screen">
+
+    <header class="flex justify-between items-center h-14 px-4">
+        <img src="./Pokédex_logo.png" alt="" class="h-10 object-contain">
     </header>
-    <main class="flex flow-col gap-3 justify-evenly items-center p-8">
-        <div class="">
-            <img src="./Pokédex_logo.png" alt="">
-            <p class="text-white font-serif font-bold text-2xl text-center">A Pokédex Website</p>
+    
+    <main class="flex flex-col md:flex-row gap-6 justify-center items-center p-4 md:p-8">
+
+        <div class="flex flex-col items-center text-center mr-20 md:mb-5">
+            <img src="./Pokédex_logo.png" alt="" class="w-40 md:w-56 object-contain">
+            <p class="text-white font-serif font-bold text-xl md:text-2xl mt-2 ">
+                A Pokédex Website
+            </p>
         </div>
-        <div
-            class="w-full max-w-5xl mx-auto flex flex-col gap-8 justify-evenly items-center bg-white/20 rounded-3xl shadow-2xl p-8 md:p-10">
 
-            <div class="flex flex-row gap-3 max-auto">
-                <input type="text" placeholder="Search Pokemon"
-                    class="flex-1 px-4 py-2 bg-yellow-50 center shadow-md outline-none">
+        <div class="w-full h-[600px] md:w-2/3 lg:w-2/3 flex flex-col gap-6 justify-evenly items-center 
+                   bg-white/25 rounded-3xl shadow-2xl p-6 md:p-10">
 
-                <button type="button" onclick="pokemon()" id="search" class="flex items-center justify-center" actio>
-                    <img src="./search.png" alt="Search" class="w-9 h-9 object-contain">
+
+            <div class="flex flex-col md:flex-row gap-3 relative w-full">
+
+                <input  id="searchInput" type="text" placeholder="Search Pokemon"
+                    class="w-full md:flex-1 px-4 py-2 bg-yellow-50 shadow-md outline-none rounded-lg">
+
+                <button type="button" onclick="pokemon()" id="search"
+                    class="flex items-center justify-center bg-yellow-50 rounded-lg p-2 shadow-md">
+
+                    <img src="./search.png" alt="Search" class="w-8 h-8 object-contain">
                 </button>
+                <div id="suggestions"
+        class="absolute left-0 right-0 bg-white shadow rounded-md mt-10 hidden">
+    </div>
+
             </div>
 
-            <div id="container" class="w-full overflow-y-auto bg-red-500 rounded-2xl shadow-md p-4 md:p-8">
-                   <div class="rounded-2xl w-[200px] h-[300px] flex flex-col justify-center p-3"></div>
+            <div id="container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+               lg:grid-cols-4 xl:grid-cols-5 gap-6 overflow-y-auto" >
+            </div>
+
+            <div id="pagination"
+            class="flex justify-center items-center gap-2 mt-8 flex-wrap">
             </div>
 
         </div>
+
     </main>
 </body>
 
 </html>
-

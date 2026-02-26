@@ -1,0 +1,166 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color:#f6f7fb;
+    color:#222;
+}
+
+.container{
+    width:100%;
+    margin:auto;
+}
+
+header{
+    background:#0b0f0e;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.header-content h1{
+    font-size:28px;
+}
+.nav-bar ul{
+    list-style:none;
+}
+
+.nav-bar ul li{
+    display:inline;
+    margin-left:25px;
+}
+
+.nav-bar a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+}
+
+.nav-bar a:hover{
+    color:#00d1b2;
+}
+
+#about{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 10%;
+    background:white;
+}
+
+.about-text h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.about-text p{
+    font-size:18px;
+    margin-bottom:25px;
+    color:#555;
+}
+
+.profile-img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.hire-btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#0b0f0e;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.hire-btn:hover{
+    background:#00d1b2;
+    color:black;
+}
+
+#skills{
+    padding:60px 10%;
+    background:#f6f7fb;
+}
+
+#skills h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+.skills-wrapper{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.skills-content1, .skills-content2{
+    background:white;
+    padding:25px;
+    width:300px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.08);
+}
+
+.skills-content1 h3, .skills-content2 h3{
+    margin-bottom:15px;
+}
+
+.skills-content1 ul, .skills-content2 ul{
+    list-style:none;
+}
+
+.skills-content1 li, .skills-content2 li{
+    padding:6px 0;
+}
+#projects{
+    padding:60px 10%;
+    background:white;
+}
+
+#projects h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.project-list{
+    background:#f1f1f1;
+    padding:15px 20px;
+    margin:15px auto;
+    width:80%;
+    border-radius:8px;
+}
+
+#contact{
+    padding:50px 10%;
+    text-align:center;
+    background:#f6f7fb;
+}
+
+#contact h2{
+    margin-bottom:15px;
+}
+
+footer{
+    background:#0b0f0e;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
